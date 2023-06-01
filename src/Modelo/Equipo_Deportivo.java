@@ -33,7 +33,7 @@ public class Equipo_Deportivo {
     }
     
     public int getPortero() {
-        return this.ValorDelEquipo+Portero;
+        return this.Portero;
     }
 
     public void setPortero(int Portero) {
@@ -45,7 +45,7 @@ public class Equipo_Deportivo {
     }
        
        public int getTecnico() {
-        return this.ValorDelEquipo+tecnico;
+        return this.tecnico;
     }
        
        public void setValorEquipo(int Valor){

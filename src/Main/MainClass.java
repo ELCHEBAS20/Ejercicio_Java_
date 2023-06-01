@@ -15,36 +15,24 @@ public class MainClass {
                  
          Equipo_Deportivo objEquipo=new Equipo_Deportivo("Atlas F.C","Juan Sebastian Suarez");
          Jugador Jugadores=new Jugador();
-         
-         
+
           if(objEquipo.nombreEquipo!="" && objEquipo.dueñoEquipo!=""){
-              
-             
-              objEquipo.setPortero(400);
-              objEquipo.setTecnico(500);
-              
-              Jugadores.ValorJugador+=objEquipo.getPortero()+objEquipo.getTecnico();
+  
+              objEquipo.setPortero(100);
+              objEquipo.setTecnico(100);
+
                System.err.println("Nombre Del equipo: "+objEquipo.nombreEquipo);
               System.err.println("Nombre Del Dueño "+objEquipo.dueñoEquipo);
-              Jugadores.setTipodeJugadores(Jugadores.Defensas,"Defensa");
-               Jugadores.setTipodeJugadores(Jugadores.MedioCampistas,"MedioCampista");
+              Jugadores.setTipodeJugadores(Jugadores.Defensas,"Defensas");
+               Jugadores.setTipodeJugadores(Jugadores.MedioCampistas,"MedioCampistas");
               Jugadores.setTipodeJugadores(Jugadores.Delanteros,"Delanteros");
-  
-              if(Jugadores.MessageTotalEquipo()){
-                    objEquipo.setValorEquipo(Jugadores.getSumaTotal());
-                    System.err.println("La suma del equipo seria la siguiente: "+objEquipo.getValorEquipo());
-              }
+              objEquipo.ValorDelEquipo=Jugadores.getSumaTotal()+objEquipo.getPortero()+objEquipo.getTecnico();
+              
+              System.out.println("La Suma total del equipo es: "+objEquipo.getValorEquipo());         
 
           }else{
                   System.err.println("Valores vacios por asignacion al objeto.");
           }
-         
-       
-   
-       
-         
-      
-       
     }
     
 }

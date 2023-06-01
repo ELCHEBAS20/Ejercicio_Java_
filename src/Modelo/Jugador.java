@@ -11,12 +11,10 @@ public class Jugador extends Persona{
 
     private boolean isTitular;
     public String[] Defensas = new String[1];
-    public String[] MedioCampistas = new String[4];
+    public String[] MedioCampistas = new String[1];
     public String[] Delanteros = new String[1];
     public int ValorJugador;
     private int count=0,SumaTotal=0;
-    
-    public static int MessageCountTotal=0;
     
     public Jugador() {
         super();
@@ -39,7 +37,7 @@ public class Jugador extends Persona{
               this.nombre=JOptionPane.showInputDialog("Ingresa por favor el nombre del: "+Tipo);
               this.apellido=JOptionPane.showInputDialog("Ingresa el apellido del: "+Tipo);
               this.Edad=Integer.parseInt(JOptionPane.showInputDialog("Ingresar edad:"+Tipo));
-             ValorJugador=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del "+Tipo));
+            ValorJugador=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del "+Tipo));
              this.setSumaTotal(ValorJugador);
               setTipoJugador[index]=setAttributePlayer(this.nombre, apellido, Edad, ValorJugador, this.isTitular);
               count++;
@@ -53,7 +51,6 @@ public class Jugador extends Persona{
                  System.out.println(setTipoJugador[index]);
                  System.out.println("===============================================");
           }
-                         MessageCountTotal++;
     }
        
        public String setAttributePlayer(String nombre,String apellido,int edad,int valorPlayer,boolean isFlag){
@@ -69,11 +66,5 @@ public class Jugador extends Persona{
                 return -1;
        }
        
-       public  boolean MessageTotalEquipo(){
-             if(MessageCountTotal==2){
-                 return true;
-             }
-             return false;
-       }
     
 }
