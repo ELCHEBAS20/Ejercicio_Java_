@@ -57,17 +57,6 @@ public class Equipo_Deportivo {
         return this.ValorDelEquipo;
     }
     
-    public void setTipodeJugadores(String[] setTipoJugador,String Tipo){
-          for(int index=0;index<setTipoJugador.length;++index){
-                int valor=Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del "+Tipo));
-               setValorEquipo(valor);
-          }
-    }
-    
-    public void getTipoJugadores(int[] setTipoJugador){
-         for(int index=0;index<setTipoJugador.length;++index){
-                 System.out.println(setTipoJugador[index]);
-          }
-    }
+ 
 
 }
