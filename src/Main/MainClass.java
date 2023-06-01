@@ -27,7 +27,13 @@ public class MainClass {
                System.err.println("Nombre Del equipo: "+objEquipo.nombreEquipo);
               System.err.println("Nombre Del Dueño "+objEquipo.dueñoEquipo);
               Jugadores.setTipodeJugadores(Jugadores.Defensas,"Defensa");
+               Jugadores.setTipodeJugadores(Jugadores.MedioCampistas,"MedioCampista");
               Jugadores.setTipodeJugadores(Jugadores.Delanteros,"Delanteros");
+  
+              if(Jugadores.MessageTotalEquipo()){
+                    objEquipo.setValorEquipo(Jugadores.getSumaTotal());
+                    System.err.println("La suma del equipo seria la siguiente: "+objEquipo.getValorEquipo());
+              }
 
           }else{
                   System.err.println("Valores vacios por asignacion al objeto.");

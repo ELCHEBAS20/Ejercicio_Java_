@@ -19,7 +19,7 @@ public class Equipo_Deportivo {
     public String V_Equipo;
     public int GolesFavor;
     public int Portero,tecnico;
-    public  int ValorDelEquipo;
+    public  int ValorDelEquipo=0;
 
     public Equipo_Deportivo() {
    
@@ -30,7 +30,6 @@ public class Equipo_Deportivo {
         this.dueñoEquipo = dueñoEquipo;
         this.Portero=0;
          this.tecnico=0;
-         this.ValorDelEquipo=0;
     }
     
     public int getPortero() {
@@ -49,13 +48,15 @@ public class Equipo_Deportivo {
         return this.ValorDelEquipo+tecnico;
     }
        
-    public void setValorEquipo(int _valor_){
-          this.ValorDelEquipo+=_valor_;
-    }
-    
-    public int getValorEquipo(){
-        return this.ValorDelEquipo;
-    }
+       public void setValorEquipo(int Valor){
+            this.ValorDelEquipo=Valor;
+       }
+       
+       public int getValorEquipo(){
+           return this.ValorDelEquipo;
+       }
+       
+
     
  
 
